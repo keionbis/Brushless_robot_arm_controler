@@ -360,7 +360,7 @@
   )
 
   (no_connect (at 127.508 70.358) (uuid 2a331126-ea2d-4433-83f2-d95e2022fabf))
-  (no_connect (at 127.508 72.39) (uuid 2a331126-ea2d-4433-83f2-d95e2022fabf))
+  (no_connect (at 127.508 72.39) (uuid 2a331126-ea2d-4433-83f2-d95e2022fac0))
 
   (wire (pts (xy 165.354 72.39) (xy 171.704 72.39))
     (stroke (width 0) (type default) (color 0 0 0 0))
@@ -519,6 +519,10 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 3dcc8c98-6679-497e-b43c-f9e0c4607183)
   )
+  (label "ENC_PWM" (at 91.694 90.932 180)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid 40d777ad-a517-48a1-a54d-56db7f0d21ff)
+  )
   (label "ENC_MISO" (at 72.136 158.75 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 415378f7-a97f-4dfc-86d5-00325ad90dab)
@@ -527,7 +531,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 42de30f9-5d32-4b84-b351-5b5575ac4fd5)
   )
-  (label "ENC_A" (at 72.136 164.846 180)
+  (label "ANALOG_ENC" (at 72.136 164.846 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 4f42c8aa-2903-4dac-9a38-58a2614c6797)
   )
@@ -535,15 +539,11 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 5785aa6c-6e0d-448d-babb-f87374ba4340)
   )
-  (label "AS5055_CS" (at 91.694 90.932 180)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid 6b8bd61d-5fcf-4e67-9fe2-ebe681688337)
-  )
-  (label "UART_RX" (at 47.244 104.902 270)
+  (label "UART_RX" (at 44.704 104.902 270)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 6d2907bb-2693-4488-867c-78f42c83c6d9)
   )
-  (label "ENC_B" (at 91.694 83.82 180)
+  (label "ENC_B" (at 91.694 85.598 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 7ec737ec-36dd-4902-ad2a-eb0094f9c0ed)
   )
@@ -559,13 +559,17 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid b0c90c27-7fb3-475e-8783-bef1f4e9c4eb)
   )
-  (label "UART_TX" (at 44.704 104.902 270)
+  (label "UART_TX" (at 47.244 104.902 270)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid c6fbb368-3158-4dd6-a76c-954d9f1c305a)
   )
   (label "ENC_Z" (at 72.136 151.892 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid cb416448-23fb-49ab-8673-080e8f42b461)
+  )
+  (label "ENC_PWM" (at 72.136 167.386 180)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid d0f76c5e-80ed-437f-af91-8d14a5a9a4d7)
   )
   (label "SDA" (at 91.694 71.882 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
@@ -583,7 +587,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid eda9e120-cd2e-4c4d-be73-af2af2de9350)
   )
-  (label "ENC_Z" (at 91.694 85.598 180)
+  (label "ENC_Z" (at 91.694 83.82 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid f2a5f333-10ad-4a9a-9a94-d82b2605e327)
   )
@@ -927,14 +931,14 @@
     )
   )
 
-  (sheet (at 72.136 141.478) (size 12.954 24.892) (fields_autoplaced)
+  (sheet (at 72.136 141.478) (size 12.954 28.956) (fields_autoplaced)
     (stroke (width 0.1524) (type solid) (color 0 0 0 0))
     (fill (color 0 0 0 0.0000))
     (uuid 1565b403-cc17-489c-bda8-38a264ef2ff9)
     (property "Sheet name" "Encoder" (id 0) (at 72.136 140.7664 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheet file" "Encoder.kicad_sch" (id 1) (at 72.136 166.9546 0)
+    (property "Sheet file" "Encoder.kicad_sch" (id 1) (at 72.136 171.0186 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (pin "I2C_SCL" output (at 72.136 143.256 180)
@@ -980,6 +984,10 @@
     (pin "AS5055_CS" input (at 72.136 162.306 180)
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid d51b61a7-337f-4778-ab4a-e312f2e06486)
+    )
+    (pin "ENC_PWM" output (at 72.136 167.386 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid d23f0a20-04d4-402e-9220-0b6436fb54d1)
     )
   )
 
@@ -1441,14 +1449,8 @@
     (path "/1565b403-cc17-489c-bda8-38a264ef2ff9/f924d19c-bd7d-4758-a146-37bf8cb755cf"
       (reference "#PWR068") (unit 1) (value "+3.3V") (footprint "")
     )
-    (path "/1565b403-cc17-489c-bda8-38a264ef2ff9/3cfc69d7-9950-4148-b339-64561e799e50"
-      (reference "#PWR069") (unit 1) (value "GND") (footprint "")
-    )
     (path "/1565b403-cc17-489c-bda8-38a264ef2ff9/21f7eede-949b-41f1-a4eb-328ad87b2643"
       (reference "#PWR070") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/1565b403-cc17-489c-bda8-38a264ef2ff9/6afc1f75-cd7e-49b7-9ac5-a50ac1a47793"
-      (reference "#PWR071") (unit 1) (value "GND") (footprint "")
     )
     (path "/663bfca8-f474-4636-b91f-0491851dfa21/3ba7f09a-6390-4360-9660-fe17fd957b5c"
       (reference "#PWR072") (unit 1) (value "VBUS") (footprint "")
@@ -1554,6 +1556,15 @@
     )
     (path "/663bfca8-f474-4636-b91f-0491851dfa21/e3236972-5b45-4369-bd33-ef9658e6ac64"
       (reference "#PWR0119") (unit 1) (value "VBUS") (footprint "")
+    )
+    (path "/1565b403-cc17-489c-bda8-38a264ef2ff9/8f1f5b3a-9a47-48d8-a0cd-6787b67e9528"
+      (reference "#PWR0120") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/1565b403-cc17-489c-bda8-38a264ef2ff9/5880819e-9f69-4b56-90a5-ec06062c0b3b"
+      (reference "#PWR0121") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/1565b403-cc17-489c-bda8-38a264ef2ff9/b381266b-c9ab-4a32-8515-54985c64eeeb"
+      (reference "#PWR0122") (unit 1) (value "GND") (footprint "")
     )
     (path "/0d30d244-1f23-41bf-960a-6073674b9b12/6cca1056-e5f6-41ff-bd5d-af4dbb55249d"
       (reference "AE1") (unit 1) (value "Antenna_Chip") (footprint "2450AT43F0100:ANTC6020X130N")
@@ -1927,8 +1938,8 @@
     (path "/0d30d244-1f23-41bf-960a-6073674b9b12/f340d0c2-3e61-4867-8898-db8a9eccbfa0"
       (reference "U2") (unit 1) (value "W25Q32JVZP") (footprint "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm")
     )
-    (path "/1565b403-cc17-489c-bda8-38a264ef2ff9/a43af72f-222b-48d7-998e-2bd9c1690b08"
-      (reference "U3") (unit 1) (value "AS5055A") (footprint "Package_DFN_QFN:QFN-16-1EP_4x4mm_P0.65mm_EP2.7x2.7mm_PullBack")
+    (path "/1565b403-cc17-489c-bda8-38a264ef2ff9/830d924b-3eb6-48e6-80bf-bd205f577cee"
+      (reference "U3") (unit 1) (value "AS5048B") (footprint "Package_SO:TSSOP-14_4.4x5mm_P0.65mm")
     )
     (path "/663bfca8-f474-4636-b91f-0491851dfa21/4f8d2d8b-0fe1-4ea8-8ecb-4b83c34cccd7"
       (reference "U4") (unit 1) (value "LMR36510ADDA") (footprint "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias")

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP DRV8301DCAR
+D 3-Phase Brushless Motor Pre-Driver with Dual Current Sense Amps and Buck Converter (PWM Ctrl w/ SPI)
+K
+F http://www.ti.com/lit/gpn/drv8301
+$ENDCMP
+#
+#End Doc Library

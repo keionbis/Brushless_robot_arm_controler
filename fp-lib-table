@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name "RP2040")(type "KiCad")(uri "/home/kbisland/Motherboard_Controller_RP2040_CM4/RP2040")(options "")(descr ""))
+  (lib (name "DRV8323")(type "KiCad")(uri "${KIPRJMOD}/DRV8323")(options "")(descr ""))
+  (lib (name "AS5600")(type "KiCad")(uri "${KIPRJMOD}/AS5600")(options "")(descr ""))
+)

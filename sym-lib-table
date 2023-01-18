@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "RP2040")(type "Legacy")(uri "/home/kbisland/Motherboard_Controller_RP2040_CM4/RP2040/RP2040.lib")(options "")(descr ""))
+  (lib (name "DRV8323HRTAT")(type "Legacy")(uri "${KIPRJMOD}/DRV8323/DRV8323HRTAT.lib")(options "")(descr ""))
+  (lib (name "DRV8323RHRGZR")(type "Legacy")(uri "${KIPRJMOD}/DRV8323/DRV8323RHRGZR.lib")(options "")(descr ""))
+)

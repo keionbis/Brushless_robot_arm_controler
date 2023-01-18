@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP DRV8323HRTAT
+D 60V Three-Phase Smart Gate Driver With Three Current Shunt Amplifiers
+K
+F http://www.ti.com/lit/gpn/DRV8323
+$ENDCMP
+#
+#End Doc Library
